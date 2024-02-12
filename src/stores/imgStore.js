@@ -69,8 +69,6 @@ export const useImgStore = defineStore('ImgStore', () => {
           const isColorFound = await isColor(image.file, colorRGB, soglia, percentuale)
           if(isColorFound){
             queryImages.value.push(image)
-          }else{
-            console.log('isColorFound: ',image, ' ', isColorFound)
           }
           if(loader.value === 100){
             loader.value = 0
